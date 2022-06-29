@@ -7,6 +7,9 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
+  setInterval(randomCard, 10000);
+};
+function randomCard() {
   let numbers = [
     "A",
     "2",
@@ -31,5 +34,8 @@ window.onload = function() {
   if (suits[randFace] == "♥" || suits[randFace] == "♦") {
     document.querySelector(".topFace").classList.add("red");
     document.querySelector(".bottomFace").classList.add("red");
+  } else {
+    document.querySelector(".topFace").classList.remove("red");
+    document.querySelector(".bottomFace").classList.remove("red");
   }
-};
+}
