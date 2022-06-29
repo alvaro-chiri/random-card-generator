@@ -25,9 +25,11 @@ window.onload = function() {
   let suits = ["♦", "♥", "♠", "♣"];
   let randNum = Math.floor(Math.random() * numbers.length);
   document.querySelector(".cardValue").innerText = numbers[randNum];
-  console.log(randNum);
   let randFace = Math.floor(Math.random() * suits.length);
   document.querySelector(".bottomFace").innerText = suits[randFace];
   document.querySelector(".topFace").innerText = suits[randFace];
-  console.log(suits);
+  if (suits[randFace] == "♥" || suits[randFace] == "♦") {
+    document.querySelector(".topFace").classList.add("red");
+    document.querySelector(".bottomFace").classList.add("red");
+  }
 };
